@@ -2,10 +2,10 @@
    COLOR PALETTE (BLUE THEME)
    ========================= */
 :root {
-  --blue-primary: #0D47A1;     /* Main header / nav */
-  --blue-secondary: #1565C0;   /* Section titles */
-  --blue-accent: #1E88E5;      /* Buttons / links */
-  --blue-light: #E3F2FD;       /* Light section background */
+  --blue-primary: #0D47A1;     
+  --blue-secondary: #1565C0;   
+  --blue-accent: #1E88E5;      
+  --blue-light: #E3F2FD;       
   --text-dark: #263238;
   --white: #FFFFFF;
 }
@@ -88,7 +88,6 @@ body {
   padding-bottom: 3px;
 }
 
-/* Sticky effect (used by JS) */
 .main-nav.sticky {
   position: fixed;
   top: 0;
@@ -97,11 +96,11 @@ body {
 }
 
 /* =========================
-   HERO SECTION
+   HERO SECTION (LOCAL IMAGE)
    ========================= */
 .hero {
   position: relative;
-  background: url('https://scontent.fdvo1-1.fna.fbcdn.net/v/t39.30808-6/469342048_122174837888099911_4688850220380111927_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=Uh1gcyMF1tcQ7kNvwHfwAzL&_nc_oc=AdlLiJbfLVVB1JUNoLpGlnDM1FVivEu23JHS0KhRJAAFIXwYClG3o1Cwgc7RFVsWWDA&_nc_zt=23&_nc_ht=scontent.fdvo1-1.fna&_nc_gid=xZ-RMpBf3gMDBwlTRazOjA&oh=00_Aflvl-RWF_Fu89wWgWsYulC2NB0io6klzGIOUkGUGONLRA&oe=6945D139') no-repeat center center;
+  background: url('MOMO.jpg') no-repeat center center;
   background-size: cover;
   color: var(--white);
   padding: 80px 0;
@@ -118,7 +117,7 @@ body {
 
 .hero h2,
 .hero p {
-  position: relative; /* keep text above overlay */
+  position: relative;
   z-index: 2;
 }
 
@@ -193,6 +192,22 @@ body {
   text-align: center;
   padding: 20px 10px;
   font-size: 0.9rem;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: var(--white);
+  margin: 0 8px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--blue-accent);
 }
 
 /* =========================
