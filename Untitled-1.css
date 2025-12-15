@@ -1,0 +1,215 @@
+/* =========================
+   COLOR PALETTE (BLUE THEME)
+   ========================= */
+:root {
+  --blue-primary: #0D47A1;     /* Main header / nav */
+  --blue-secondary: #1565C0;   /* Section titles */
+  --blue-accent: #1E88E5;      /* Buttons / links */
+  --blue-light: #E3F2FD;       /* Light section background */
+  --text-dark: #263238;
+  --white: #FFFFFF;
+}
+
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* =========================
+   TOP HEADER
+   ========================= */
+.top-header {
+  background-color: var(--blue-primary);
+  color: var(--white);
+  padding: 15px 0;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.top-header h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.top-header p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* =========================
+   NAVIGATION BAR
+   ========================= */
+.main-nav {
+  background-color: var(--blue-secondary);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 12px 0;
+}
+
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  border-bottom: 2px solid var(--white);
+  padding-bottom: 3px;
+}
+
+/* Sticky effect (used by JS) */
+.main-nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+.hero {
+  position: relative;
+  background: url('https://scontent.fdvo1-1.fna.fbcdn.net/v/t39.30808-6/469342048_122174837888099911_4688850220380111927_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=Uh1gcyMF1tcQ7kNvwHfwAzL&_nc_oc=AdlLiJbfLVVB1JUNoLpGlnDM1FVivEu23JHS0KhRJAAFIXwYClG3o1Cwgc7RFVsWWDA&_nc_zt=23&_nc_ht=scontent.fdvo1-1.fna&_nc_gid=xZ-RMpBf3gMDBwlTRazOjA&oh=00_Aflvl-RWF_Fu89wWgWsYulC2NB0io6klzGIOUkGUGONLRA&oe=6945D139') no-repeat center center;
+  background-size: cover;
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(13, 71, 161, 0.7); /* overlay for readability */
+  z-index: 1;
+}
+
+.hero h2,
+.hero p {
+  position: relative; /* keep text above overlay */
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+.section {
+  padding: 60px 0;
+}
+
+.section.light {
+  background-color: var(--blue-light);
+}
+
+.section h3 {
+  color: var(--blue-secondary);
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+.section p {
+  margin-bottom: 15px;
+}
+
+/* =========================
+   DOCUMENT LIST
+   ========================= */
+.document-list {
+  list-style: square;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.document-list li {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.btn {
+  display: inline-block;
+  background-color: var(--blue-accent);
+  color: var(--white);
+  padding: 10px 22px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: var(--blue-secondary);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  background-color: var(--blue-primary);
+  color: var(--white);
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+   ========================= */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+}
